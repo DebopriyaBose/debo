@@ -9,64 +9,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
     <title>Form fill up</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-/* Popup container - can be anything you want */
-.popup {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-/* The actual popup */
-.popup .popuptext {
-  visibility: hidden;
-  width: 160px;
-  background-color: #555;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 8px 0;
-  position: absolute;
-  z-index: 1;
-  bottom: 125%;
-  left: 50%;
-  margin-left: -80px;
-}
-
-/* Popup arrow */
-.popup .popuptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
-}
-
-/* Toggle this class - hide and show the popup */
-.popup .show {
-  visibility: visible;
-  -webkit-animation: fadeIn 1s;
-  animation: fadeIn 1s;
-}
-
-/* Add animation (fade in the popup) */
-@-webkit-keyframes fadeIn {
-  from {opacity: 0;} 
-  to {opacity: 1;}
-}
-
-@keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity:1 ;}
-}
-</style>
   </head>
   
   
@@ -84,28 +26,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <input type="text" ><br><br><br>
   <label>Last name:</label>
   <input type="text"><br><br>
-  <button><a href="index.html">back</a></button>&nbsp; &nbsp;&nbsp;
-
-  
-<div class="popup" onclick="myFunction()">Submit
-  <span class="popuptext" id="btn0">Thank you for registering!</span>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({
-      'event': 'login', 'loginMethod': 'email'});
-    </script>
-</div>
-  
-  <script>
-// When the user clicks on div, open the popup
-function myFunction() {
-  var popup = document.getElementById("btn0");
-  popup.classList.toggle("show");
-}
-</script>
-  
-  
-  
+  <button onclick="dataLayer.push({'event': 'login', 'loginMethod': 'facebook'});"> <a id="btn0" href="page.html">Submit</a></button>
+ 
 </form>
 </body>
 </html>
